@@ -20,13 +20,15 @@ export class AppComponent  {
   });  
 
   RegisterUser(){
-    console.log(this.registrationForm.controls['FirstName']);
+    //console.log(this.registrationForm.controls['FirstName']);
     
-    console.log(this.registrationForm);
+    //console.log(this.registrationForm);
 
     if(this.registrationForm.valid){
       // Save to DB;
-      this.userRegSvc.registerUser(this.registrationForm.value)
+      console.log('1. Send Data to Service Layer : ',this.registrationForm);
+      this.userRegSvc.registerUser(this.registrationForm.value);
+      console.log('2. After Service Call : ',this.registrationForm);
       console.log(this.registrationForm.value);
     }
     else{

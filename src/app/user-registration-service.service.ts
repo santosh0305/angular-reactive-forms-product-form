@@ -7,5 +7,6 @@ export class UserRegistrationServiceService {
 
   registerUser(data: any){
     // Do http post call
+    console.log('User Registration Form Details :',data);
   }
 }
