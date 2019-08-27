@@ -1,4 +1,21 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<form FormGroup="registrationForm">
+  <h2>Register User:</h2>
+  <div>  FirstName : 
+         <input formControlName="FirstName" type="text"></div>
+  <div>  LastName (optional) :  
+         <input formControlName="LastName" type="text"></div>
+  <div>  Password :  
+         <input formControlName="Password" type="password"></div>
+  <div>  Email :  
+         <input formControlName="Email" type="text"></div>
+  <div>  PhoneNumber :  
+         <input formControlName="PhoneNumber" type="text"></div>
+  <br>
+  <div>
+    Are you sure you want to register with our app?
+    <input type="checkbox" checked>
+  </div>
+  <div>
+    <button>Register</button>
+  </div>
+</form>
