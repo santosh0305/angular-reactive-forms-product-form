@@ -1,4 +1,4 @@
-<form FormGroup="registrationForm">
+<form [formGroup]="registrationForm" (ngSubmit)="RegisterUser()">
   <h2>Register User:</h2>
   <div>  FirstName : 
          <input formControlName="FirstName" type="text"></div>

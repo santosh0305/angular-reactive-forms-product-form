@@ -8,13 +8,26 @@ import { FormControl, FormGroup, Validators, FormControlName } from '@angular/fo
 })
 export class AppComponent  {
 
-registrationForm = new FormGroup({
-  'FirstName': new FormControl('please enter firstname',Validators.required),
-  'LastName': new FormControl('please enter lastname',null),
-  'Password': new FormControl('please enter password',null),
-  'Email': new FormControl('please enter email',Validators.email),
-  'PhoneNumber': new FormControl('please enter phone',Validators.email),
-});  
+  registrationForm = new FormGroup({
+    'FirstName': new FormControl('santosh',Validators.required),
+    'LastName': new FormControl('nander',Validators.minLength(5)),
+    'Password': new FormControl('tests123',Validators.required),
+    'Email': new FormControl('santosh@gmail.com',Validators.email),
+    'PhoneNumber': new FormControl('santosh@gmail.com',Validators.email),
+  });  
 
+  RegisterUser(){
+    console.log(this.registrationForm.controls['FirstName']);
+    
+    console.log(this.registrationForm);
 
+    if(this.registrationForm.valid){
+      // Save to DB;
+      console.log(this.registrationForm.value);
+    }
+    else{
+      console.error('Unable to save !!');
+    }
+    
+  }
 }
