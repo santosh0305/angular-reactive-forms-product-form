@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { ViewRegisteredUsersComponent } from './view-registered-users/view-registered-users.component';
 import { HeaderComponent } from './header/header.component';
+import { UserRegistrationServiceService } from './user-registration-service.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule ],
   declarations: [ AppComponent, HelloComponent, ViewRegisteredUsersComponent, HeaderComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [UserRegistrationServiceService]
 })
 export class AppModule { }

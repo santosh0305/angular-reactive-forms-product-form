@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormControlName } from '@angular/forms';
+import { UserRegistrationServiceService } from './user-registration-service.service';
 
 @Component({
   selector: 'my-app',
@@ -7,7 +8,9 @@ import { FormControl, FormGroup, Validators, FormControlName } from '@angular/fo
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
+  constructor(private userRegSvc : UserRegistrationServiceService){
 
+  }
   registrationForm = new FormGroup({
     'FirstName': new FormControl('santosh',Validators.required),
     'LastName': new FormControl('nander',Validators.minLength(5)),
@@ -23,6 +26,7 @@ export class AppComponent  {
 
     if(this.registrationForm.valid){
       // Save to DB;
+      this.userRegSvc.registerUser(this.registrationForm.value)
       console.log(this.registrationForm.value);
     }
     else{
