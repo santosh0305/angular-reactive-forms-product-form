@@ -32,7 +32,7 @@ export class AppComponent  {
       console.log(this.registrationForm.value);
     }
     else{
-      console.error('Unable to save !!');
+      console.error('Invalid Form !!');
     }
     
   }
