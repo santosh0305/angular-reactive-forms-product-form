@@ -12,11 +12,11 @@ export class AppComponent  {
 
   }
   registrationForm = new FormGroup({
-    'FirstName': new FormControl('santosh',Validators.required),
-    'LastName': new FormControl('nander',Validators.minLength(5)),
-    'Password': new FormControl('tests123',Validators.required),
-    'Email': new FormControl('santosh@gmail.com',Validators.email),
-    'PhoneNumber': new FormControl('santosh@gmail.com',Validators.email),
+    'FirstName': new FormControl('',Validators.required),
+    'LastName': new FormControl('',Validators.minLength(5)),
+    'Password': new FormControl('',Validators.required),
+    'Email': new FormControl('',Validators.email),
+    'PhoneNumber': new FormControl('',Validators.email),
   });  
 
   RegisterUser(){
